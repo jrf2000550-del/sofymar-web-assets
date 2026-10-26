@@ -549,10 +549,13 @@ function track(evento) {}
   if (video && hero) {
     const mobile = matchMedia('(max-width: 768px)').matches;
     if (reduce) video.style.display = 'none';
-    else if (mobile) { video.src = video.dataset.mobile; video.loop = true; video.autoplay = true; video.play().catch(() => {}); }
     else {
-      scrub = true; video.src = video.dataset.desktop; video.pause();
+      scrub = true; video.src = mobile ? video.dataset.mobile : video.dataset.desktop; video.pause();
       video.addEventListener('loadedmetadata', () => { ready = true; upd(); }); video.load();
+      if (mobile) { /* iOS/Android: el video hay que "despertarlo" con el primer toque para poder moverlo con el scroll */
+        const wake = () => { video.play().then(() => video.pause()).catch(() => {}); };
+        ['touchstart', 'pointerdown', 'scroll'].forEach(ev => addEventListener(ev, wake, { once: true, passive: true }));
+      }
       (function loop() { if (ready && Math.abs(target - cur) > .001) { cur += (target - cur) * .18; if (!video.seeking) video.currentTime = cur; } requestAnimationFrame(loop); })();
     }
   }
