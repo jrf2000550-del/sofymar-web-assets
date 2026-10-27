@@ -700,3 +700,4 @@
   .yt-cap{padding:14px}
 }
 @media (max-width:640px){.clip-hint{font-size:11px;letter-spacing:.06em;text-align:center;padding:0 8px}.clip-net{font-size:18px}}
+@media (max-width:760px){.reel{aspect-ratio:4/5}.media-vis .slot{aspect-ratio:4/5}}
