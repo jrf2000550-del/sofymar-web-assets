@@ -166,6 +166,18 @@ function track(evento) {}
   $$('video[data-autoview]').forEach(v => vio.observe(v));
   const icoOff = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9Z"/><path d="m17 9 5 6M22 9l-5 6"/></svg>';
   const icoOn = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9Z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>';
+  /* Videos externos (YouTube, TikTok, Facebook): se cargan recién al tocar, para que la página no pese */
+  $$('[data-embed]').forEach(box => {
+    const btn = box.querySelector('button'); if (!btn) return;
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = box.dataset.embed; f.title = btn.getAttribute('aria-label') || 'Video';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write'; f.allowFullscreen = true;
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin'); f.setAttribute('scrolling', 'no');
+      box.classList.add('on'); box.appendChild(f); btn.remove();
+    });
+  });
+
   $$('[data-sound]').forEach(btn => {
     const v = btn.parentElement.querySelector('video'); btn.innerHTML = icoOff;
     btn.addEventListener('click', () => {
