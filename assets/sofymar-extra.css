@@ -578,8 +578,8 @@
 .spoke{position:absolute;left:50%;top:50%;width:50%;height:1px;transform-origin:0 50%;transform:rotate(var(--a));background:linear-gradient(90deg,rgba(217,169,40,.12),rgba(217,169,40,.45));overflow:hidden}
 .spoke::after{content:"";position:absolute;top:-1px;height:3px;width:26px;border-radius:3px;background:linear-gradient(90deg,transparent,#F0C653);box-shadow:0 0 10px #D9A928;animation:spk 3s linear infinite;animation-delay:var(--d)}
 @keyframes spk{from{left:100%}to{left:-30px}}
-.nd{position:absolute;left:calc(50% + 50% * cos(var(--a)));top:calc(50% + 50% * sin(var(--a)));transform:translate(-50%,-50%);z-index:2}
-.nd b{display:block;white-space:nowrap;font:500 clamp(9px,1.5vw,11px)/1 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:8px 11px;border-radius:999px;background:rgba(11,12,16,.92);border:1px solid rgba(217,169,40,.5);box-shadow:0 0 20px -4px rgba(217,169,40,.45);animation:cvspinr var(--sp) linear infinite}
+.core-vis .nd{position:absolute;left:calc(50% + 50% * cos(var(--a)));top:calc(50% + 50% * sin(var(--a)));transform:translate(-50%,-50%);z-index:2}
+.core-vis .nd b{display:block;white-space:nowrap;font:500 clamp(9px,1.5vw,11px)/1 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:8px 11px;border-radius:999px;background:rgba(11,12,16,.92);border:1px solid rgba(217,169,40,.5);box-shadow:0 0 20px -4px rgba(217,169,40,.45);animation:cvspinr var(--sp) linear infinite}
 .dt{position:absolute;left:calc(50% + 50% * cos(var(--a)));top:calc(50% + 50% * sin(var(--a)));width:6px;height:6px;margin:-3px;border-radius:50%;background:#6FB2E8;box-shadow:0 0 12px #6FB2E8;animation:dtp 3s ease-in-out infinite}
 .dt:nth-child(odd){animation-delay:.9s}
 @keyframes dtp{50%{opacity:.25;transform:scale(.6)}}
@@ -642,7 +642,7 @@
   .eco-tabs{scroll-snap-type:x proximity;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:28px}
   .eco-tab{scroll-snap-align:start}
   .eco-tab strong{font-size:13.5px}
-  .nd b{font-size:11px;padding:7px 10px}
+  .core-vis .nd b{font-size:11px;padding:7px 10px}
   .mani-vis{aspect-ratio:auto;display:grid;gap:12px;max-width:none}
   .mani-vis .a,.mani-vis .b,.mani-vis .c{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%}
   .mani-vis .b{aspect-ratio:3/2}
@@ -714,3 +714,10 @@
 .ag-four{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:1000px){.ag-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.ag-four{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:1060px){
+  .pipe .stage{grid-template-columns:62px minmax(0,1fr);column-gap:20px;align-items:start}
+  .pipe .stage>*{grid-column:2;min-width:0}
+  .pipe .stage>.dt{grid-column:1;grid-row:1/span 6}
+  .pipe .stage .badge{justify-self:start}
+}
+@media (max-width:760px){.bfa .nd text{font-size:13px}.bfa .nd text{letter-spacing:0}}
