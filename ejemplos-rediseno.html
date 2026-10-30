@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ejemplos de rediseño SOFYMAR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#E9E6DF;color:#1b1a17;font:400 16px/1.6 Inter,system-ui,sans-serif}
+.page{max-width:1240px;margin:0 auto;padding:28px 16px 80px}
+h1.t{font:600 clamp(26px,4vw,40px)/1.1 Manrope,sans-serif;margin:0 0 8px}
+.sub{color:#55503F;max-width:70ch;margin:0 0 36px}
+.opt{margin:0 0 72px}
+.opt-h{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:6px}
+.opt-h h2{font:700 clamp(20px,3vw,28px)/1.1 Manrope,sans-serif;margin:0}
+.rec{background:#1b1a17;color:#fff;font:600 12px/1 Inter;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;border-radius:999px}
+.opt p.d{margin:0 0 18px;color:#55503F;max-width:75ch}
+.pros{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.pros li{background:#fff;border:1px solid #d8d3c6;border-radius:999px;padding:6px 12px;font-size:13.5px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+@media (max-width:960px){.row{grid-template-columns:minmax(0,1fr)}.phone{margin:0 auto}}
+.frame{border-radius:12px;overflow:hidden;border:1px solid #cfc9bb;background:#fff;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:#f1eee6;border-bottom:1px solid #d8d3c6}
+.bar i{width:9px;height:9px;border-radius:50%;background:#cbc5b6}
+.phone{width:340px;max-width:100%;border:10px solid #1b1a17;border-radius:34px;overflow:hidden;background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.cap{font-size:13px;color:#6b6657;margin:8px 4px 0}
+
+/* ====== escenario (se usa en escritorio y en celular) ====== */
+.stage{container-type:inline-size;width:100%}
+.s{position:relative;overflow:hidden}
+.s .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 28px}
+.s .brand{display:flex;align-items:center;gap:10px;font:800 15px/1 Manrope;letter-spacing:.14em}
+.s .brand img{width:28px;height:28px}
+.s .links{display:flex;gap:22px;font:500 14px/1 Inter}
+.s .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:600 15px/1 Inter;text-decoration:none;border:1px solid transparent;white-space:nowrap}
+.s .hero{padding:28px 28px 40px}
+.s .eyebrow{font:500 12px/1.3 "JetBrains Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
+.s h3.h{margin:0 0 16px}
+.s .lead{margin:0 0 24px;max-width:56ch}
+.s .cta{display:flex;flex-wrap:wrap;gap:10px}
+.s .svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:0 28px 34px}
+.s .card{overflow:hidden}
+.s .card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.s .card div{padding:14px 16px 18px}
+.s .card b{display:block;font:700 15px/1.2 Manrope;margin-bottom:4px}
+.s .card span{font-size:13.5px;opacity:.8;line-height:1.45;display:block}
+@container (max-width:640px){
+  .s .links{display:none}
+  .s .nav{padding:14px 18px}
+  .s .hero{padding:18px 18px 28px}
+  .s .svc{grid-template-columns:minmax(0,1fr);padding:0 18px 26px}
+  .s .btn{width:100%}
+  .s .cta{flex-direction:column}
+  .s .lead{font-size:15.5px}
+}
+
+/* ====== 1. Lujo editorial claro ====== */
+.d1{background:#F6F3EC;color:#2B2A27}
+.d1 .brand{color:#2B2A27}
+.d1 .links{color:#55503F}
+.d1 .btn.p{background:#2B2A27;color:#F6F3EC;border-radius:4px}
+.d1 .btn.g{border-color:#2B2A27;color:#2B2A27;border-radius:4px}
+.d1 .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:32px;align-items:center}
+.d1 .eyebrow{color:#8A6B3F}
+.d1 h3.h{font:500 clamp(30px,4.4cqw,56px)/1.06 Fraunces,serif;letter-spacing:-.015em}
+.d1 h3.h em{font-style:italic;color:#8A6B3F}
+.d1 .lead{color:#55503F}
+.d1 .photo{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative}
+.d1 .photo img{width:100%;height:100%;object-fit:cover}
+.d1 .photo span{position:absolute;left:12px;bottom:12px;background:rgba(246,243,236,.92);padding:7px 11px;font:500 12px/1 Inter;border-radius:4px}
+.d1 .card{background:#fff;border:1px solid #E0DACB;border-radius:6px}
+.d1 .card b{font-family:Fraunces,serif;font-weight:500;font-size:18px}
+@container (max-width:640px){.d1 .hero{grid-template-columns:minmax(0,1fr)}.d1 .photo{aspect-ratio:4/3}.d1 h3.h{font-size:34px}}
+
+/* ====== 2. Oscuro cinematográfico ====== */
+.d2{background:#0E0D0B;color:#fff}
+.d2 .bg{position:absolute;inset:0}
+.d2 .bg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.d2 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,13,11,.92),rgba(14,13,11,.35) 70%),linear-gradient(0deg,#0E0D0B,transparent 40%)}
+.d2 .in{position:relative;z-index:1}
+.d2 .btn.p{background:#D9A928;color:#0E0D0B;border-radius:4px}
+.d2 .btn.g{border-color:rgba(255,255,255,.4);color:#fff;border-radius:4px}
+.d2 .eyebrow{color:#D9A928}
+.d2 .hero{padding-top:70px;padding-bottom:80px}
+.d2 h3.h{font:500 clamp(32px,5cqw,64px)/1.04 Fraunces,serif;max-width:16ch}
+.d2 h3.h em{font-style:normal;color:#D9A928}
+.d2 .lead{color:#C9C2B4}
+.d2 .card{background:rgba(26,25,21,.82);border:1px solid #3A3832;border-radius:6px}
+@container (max-width:640px){.d2 .hero{padding-top:50px;padding-bottom:50px}.d2 h3.h{font-size:34px}}
+
+/* ====== 3. Startup de IA ====== */
+.d3{background:#F4F7F6;color:#10201D}
+.d3 .btn.p{background:#10201D;color:#fff;border-radius:999px}
+.d3 .btn.g{border-color:#10201D;color:#10201D;border-radius:999px}
+.d3 .eyebrow{color:#0F766E}
+.d3 .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:center}
+.d3 h3.h{font:800 clamp(30px,4.2cqw,52px)/1.05 Manrope,sans-serif;letter-spacing:-.03em}
+.d3 h3.h em{font-style:normal;background:linear-gradient(90deg,#0F766E,#D9A928);-webkit-background-clip:text;background-clip:text;color:transparent}
+.d3 .lead{color:#40524E}
+.d3 .chat{background:#fff;border:1px solid #D6E2DF;border-radius:20px;padding:16px;box-shadow:0 30px 60px -30px rgba(15,118,110,.4)}
+.d3 .chat .h2{display:flex;align-items:center;gap:8px;font:700 13px/1 Manrope;margin-bottom:12px}
+.d3 .chat .h2 i{width:9px;height:9px;border-radius:50%;background:#16a34a}
+.d3 .m{max-width:85%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.4;margin-bottom:8px}
+.d3 .m.in{background:#EEF3F2}
+.d3 .m.out{background:#0F766E;color:#fff;margin-left:auto}
+.d3 .card{background:#fff;border:1px solid #D6E2DF;border-radius:16px}
+@container (max-width:640px){.d3 .hero{grid-template-columns:minmax(0,1fr)}.d3 h3.h{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1 class="t">Ejemplos de rediseño · SOFYMAR</h1>
+  <p class="sub">Tres direcciones con tus fotos y tus textos reales. A la izquierda se ve en computadora y a la derecha en celular. Esto es solo una muestra del inicio: la dirección que elijas se aplica después a las 6 páginas.</p>
+
+  <section class="opt">
+    <div class="opt-h"><h2>Opción 1 · Lujo editorial claro</h2><span class="rec">Mi recomendación</span></div>
+    <p class="d">Fondo marfil, tipografía serif, fotos grandes de tus propiedades y botones sobrios. Se siente como una agencia inmobiliaria premium, y la propiedad es la protagonista. En celular se lee mejor que un fondo negro, incluso a pleno sol.</p>
+    <ul class="pros"><li>Más confianza con propietarios y desarrolladoras</li><li>Resalta tus fotos y trabajos reales</li><li>Muy legible en celular</li></ul>
+    <div class="row">
+      <div><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="stage" data-clone="a1"><div class="s d1" id="a1">
+        <div class="nav"><div class="brand"><img src="assets/sofymar-emblema.png" alt="">SOFYMAR</div><div class="links"><span>Inicio</span><span>Soluciones</span><span>Trabajos</span><span>Contacto</span></div><a class="btn p">Hablemos</a></div>
+        <div class="hero"><div><p class="eyebrow">Real estate inteligente · Santa Cruz</p><h3 class="h">Presentamos tus propiedades como <em>piezas únicas.</em></h3><p class="lead">Páginas web, video, visualización con IA y una asistente que atiende a tus clientes por WhatsApp. Todo conectado, para agentes y desarrolladoras en Bolivia.</p><div class="cta"><a class="btn p">Ver trabajos reales</a><a class="btn g">Hablar por WhatsApp</a></div></div><div class="photo"><img src="assets/colinas-aerea-laguna.webp" alt=""><span>Colinas del Urubó · trabajo real</span></div></div>
+        <div class="svc"><div class="card"><img src="assets/persona-agente-clientes.webp" alt=""><div><b>SOFYMAR IA</b><span>Sofya responde, califica y ayuda a agendar.</span></div></div><div class="card"><img src="assets/media-ingrid-poster.jpg" alt=""><div><b>SOFYMAR MEDIA</b><span>Video, foto y dron que generan consultas.</span></div></div><div class="card"><img src="assets/aiv-colinas-casa-ia-mejorada.webp" alt=""><div><b>SOFYMAR AI VISUAL</b><span>Del terreno vacío a la casa que se imagina.</span></div></div></div>
+      </div></div></div><p class="cap">Computadora</p></div>
+      <div><div class="phone"><div class="stage" data-mirror="a1"></div></div><p class="cap" style="text-align:center">Celular</p></div>
+    </div>
+  </section>
+
+  <section class="opt">
+    <div class="opt-h"><h2>Opción 2 · Oscuro cinematográfico</h2></div>
+    <p class="d">Lo que ya tienes, pero más pulido: el video del edificio ocupa toda la portada, con menos secciones y más aire. Es el cambio más pequeño y mantiene tu identidad negro y dorado.</p>
+    <ul class="pros"><li>Impacto visual inmediato</li><li>Menos trabajo de ajuste</li><li>Mantiene el dorado del logo</li></ul>
+    <div class="row">
+      <div><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="stage" data-clone="a2"><div class="s d2" id="a2">
+        <div class="bg"><img src="assets/hero-edificio-poster.jpg" alt=""></div>
+        <div class="in"><div class="nav"><div class="brand"><img src="assets/sofymar-emblema.png" alt="">SOFYMAR</div><div class="links"><span>Inicio</span><span>Soluciones</span><span>Trabajos</span><span>Contacto</span></div><a class="btn p">Hablemos</a></div>
+        <div class="hero"><p class="eyebrow">Para agentes, oficinas y desarrolladoras en Bolivia</p><h3 class="h">Tu negocio inmobiliario merece un sistema <em>a la altura.</em></h3><p class="lead">Inteligencia artificial, CRM, video y páginas web conectados, para presentar mejor tus propiedades y atender más oportunidades.</p><div class="cta"><a class="btn p">Conocé el ecosistema</a><a class="btn g">Hablemos por WhatsApp</a></div></div>
+        <div class="svc"><div class="card"><div><b>SOFYMAR IA</b><span>Sofya responde, califica y ayuda a agendar.</span></div></div><div class="card"><div><b>SOFYMAR MEDIA</b><span>Video, foto y dron que generan consultas.</span></div></div><div class="card"><div><b>SOFYMAR WEB</b><span>Landings y showrooms que llevan a WhatsApp.</span></div></div></div></div>
+      </div></div></div><p class="cap">Computadora</p></div>
+      <div><div class="phone"><div class="stage" data-mirror="a2"></div></div><p class="cap" style="text-align:center">Celular</p></div>
+    </div>
+  </section>
+
+  <section class="opt">
+    <div class="opt-h"><h2>Opción 3 · Startup de IA moderna</h2></div>
+    <p class="d">Fondo claro con verde y dorado, y la conversación de Sofya como pieza principal de la portada. Se ve más tecnológico y menos de lujo inmobiliario. Funciona si quieres vender sobre todo el agente de IA.</p>
+    <ul class="pros"><li>El producto (Sofya) se ve desde el primer segundo</li><li>Sensación de software actual</li><li>Menos "agencia", más "plataforma"</li></ul>
+    <div class="row">
+      <div><div class="frame"><div class="bar"><i></i><i></i><i></i></div><div class="stage" data-clone="a3"><div class="s d3" id="a3">
+        <div class="nav"><div class="brand"><img src="assets/sofymar-emblema.png" alt="">SOFYMAR</div><div class="links"><span>Inicio</span><span>Soluciones</span><span>Trabajos</span><span>Contacto</span></div><a class="btn p">Hablemos</a></div>
+        <div class="hero"><div><p class="eyebrow">Inteligencia artificial para inmobiliarias</p><h3 class="h">Tu asistente atiende, <em>tú cierras.</em></h3><p class="lead">Sofya responde las consultas por WhatsApp, califica a los interesados y deja todo ordenado en tu CRM.</p><div class="cta"><a class="btn p">Quiero ver cómo funciona</a><a class="btn g">Ver trabajos</a></div></div>
+        <div class="chat"><div class="h2"><i></i>Sofya · SOFYMAR IA</div><div class="m in">¿Sigue disponible el depto?</div><div class="m out">¡Sí! ¿Es para vivir o para inversión?</div><div class="m in">Para vivir, somos dos.</div><div class="m out">¿Te queda bien visitarlo el jueves a las 17:00?</div></div></div>
+        <div class="svc"><div class="card"><div><b>SOFYMAR IA</b><span>Sofya responde, califica y ayuda a agendar.</span></div></div><div class="card"><div><b>SOFYMAR MEDIA</b><span>Video, foto y dron que generan consultas.</span></div></div><div class="card"><div><b>SOFYMAR WEB</b><span>Landings y showrooms que llevan a WhatsApp.</span></div></div></div>
+      </div></div></div><p class="cap">Computadora</p></div>
+      <div><div class="phone"><div class="stage" data-mirror="a3"></div></div><p class="cap" style="text-align:center">Celular</p></div>
+    </div>
+  </section>
+</div>
+<script>
+document.querySelectorAll('[data-mirror]').forEach(function(m){
+  var src=document.getElementById(m.dataset.mirror); if(!src) return;
+  var c=src.cloneNode(true); c.removeAttribute('id'); m.appendChild(c);
+});
+</script>
+</body>
+</html>
