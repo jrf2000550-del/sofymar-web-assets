@@ -710,3 +710,7 @@
 .human .big{margin:10px 0 18px}
 @media (max-width:860px){.human-in{grid-template-columns:minmax(0,1fr)}.human-fig img{max-height:420px}.human .btn{width:100%;justify-content:center}}
 .human .btn-gold{color:#08090B!important}
+
+.ag-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.ag-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.ag-four{grid-template-columns:minmax(0,1fr)}}
