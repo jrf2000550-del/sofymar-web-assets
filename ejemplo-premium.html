@@ -7,9 +7,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>SOFYMAR · Opciones premium</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0B0A08;--ink:#F2EEE6;--mut:#A8A193;--line:rgba(242,238,230,.16);--gold:#C8A45C;--stroke:rgba(242,238,230,.35);--panel:#15130f;--btnink:#17120a;--hw:300;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+:root{--bg:#0B0A08;--ink:#F2EEE6;--mut:#A8A193;--line:rgba(242,238,230,.16);--gold:#C8A45C;--stroke:rgba(242,238,230,.35);--panel:#15130f;--btnink:#17120a;--hw:300;--serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -20,10 +20,10 @@ a{color:inherit;text-decoration:none}
 .eyebrow{font:500 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 
 /* ===== opciones de diseño ===== */
-html[data-t="b"]{--bg:#F3EFE6;--ink:#1B1A17;--mut:#6B6657;--line:rgba(27,26,23,.16);--gold:#8A6B3F;--stroke:rgba(27,26,23,.4);--panel:#E8E2D4;--btnink:#fff}
+html[data-t="b"]{--bg:#FFFFFF;--ink:#101010;--mut:#5F5F5C;--line:rgba(16,16,16,.14);--gold:#8A6B3F;--stroke:rgba(16,16,16,.4);--panel:#EEEEEC;--btnink:#fff}
 html[data-t="c"]{--bg:#0A1B17;--ink:#EDE9DC;--mut:#9DAEA6;--line:rgba(237,233,220,.16);--gold:#C9A35B;--stroke:rgba(237,233,220,.35);--panel:#102620;--btnink:#10150f;--hw:300;--serif:"Manrope",system-ui,sans-serif}
-html[data-t="c"] .hero h1,html[data-t="c"] .manifesto p.big,html[data-t="c"] .chap h2,html[data-t="c"] .proof h2,html[data-t="c"] .final h2,html[data-t="c"] .num{letter-spacing:-.045em;font-weight:300}
-html[data-t="c"] em{font-style:normal}
+html[data-t="c"] .hero h1,html[data-t="c"] .manifesto p.big,html[data-t="c"] .chap h2,html[data-t="c"] .proof h2,html[data-t="c"] .final h2,html[data-t="c"] .num{letter-spacing:-.02em;font-weight:300}
+
 .hero{color:#F2EEE6}
 .hero .eyebrow,.hero h1 em{color:#C8A45C}
 .hero-foot{color:#A8A193}
@@ -32,7 +32,7 @@ html[data-t="c"] em{font-style:normal}
 .chat .who,.tag-v{color:#C9C2B4}
 .tag-v{color:#F2EEE6}
 .sw{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:80;display:flex;gap:4px;padding:5px;background:rgba(20,19,15,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:999px}
-.sw button{white-space:nowrap;border:0;background:transparent;color:#F2EEE6;font:600 13px/1 Inter,sans-serif;padding:11px 16px;border-radius:999px;cursor:pointer}
+.sw button{white-space:nowrap;border:0;background:transparent;color:#F2EEE6;font:600 13px/1 'Instrument Sans',sans-serif;padding:11px 16px;border-radius:999px;cursor:pointer}
 .sw button.on{background:#F2EEE6;color:#14130f}
 @media (max-width:420px){.sw button{padding:10px 12px;font-size:12px}}
 /* header */
@@ -53,8 +53,8 @@ header nav a:hover::after{transform:scaleX(1)}
 .hero::after{content:"";position:absolute}
 .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,10,8,.88) 0%,rgba(11,10,8,.15) 55%,rgba(11,10,8,.5) 100%)}
 .hero-copy{position:absolute;left:0;right:0;bottom:clamp(70px,12vh,130px)}
-.hero h1{margin:18px 0 0;font:300 clamp(40px,8.2vw,128px)/.98 var(--serif);letter-spacing:-.035em;max-width:13ch}
-.hero h1 em{font-style:italic;color:var(--gold)}
+.hero h1{margin:0;font:300 clamp(38px,6.4vw,96px)/1.02 var(--serif);letter-spacing:-.02em;max-width:14ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--gold)}
 .line{display:block;overflow:hidden;padding-bottom:.08em}
 .line>span{display:block;transform:translateY(105%);transition:transform 1.3s var(--ease)}
 .ready .line>span{transform:none}
@@ -82,8 +82,8 @@ header nav a:hover::after{transform:scaleX(1)}
 .chap-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,100px);align-items:center}
 .chap.rev .chap-in>:first-child{order:2}
 .num{font:var(--hw) clamp(60px,9vw,150px)/1 var(--serif);color:transparent;-webkit-text-stroke:1px var(--stroke);letter-spacing:-.04em}
-.chap h2{margin:14px 0 14px;font:300 clamp(34px,5vw,76px)/1.02 var(--serif);letter-spacing:-.03em}
-.chap h2 em{font-style:italic;color:var(--gold)}
+.chap h2{margin:14px 0 14px;font:300 clamp(34px,5vw,76px)/1.02 var(--serif);letter-spacing:-.018em;text-wrap:balance}
+.chap h2 em{font-style:normal;color:var(--gold)}
 .chap p{margin:0 0 24px;color:var(--mut);max-width:42ch}
 .link{display:inline-flex;align-items:center;gap:12px;font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:8px}
 .link span{transition:transform .5s var(--ease)}
@@ -108,7 +108,17 @@ header nav a:hover::after{transform:scaleX(1)}
 @keyframes sweep{0%,10%{clip-path:inset(0 0 0 92%)}90%,100%{clip-path:inset(0 0 0 8%)}}
 @keyframes sweepbar{0%,10%{left:92%}90%,100%{left:8%}}
 .tag-v{position:absolute;bottom:14px;left:14px;z-index:2;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;background:rgba(11,10,8,.7);padding:8px 11px;border-radius:2px}
-@media (max-width:860px){.chap-in{grid-template-columns:minmax(0,1fr)}.chap.rev .chap-in>:first-child{order:0}.vis{aspect-ratio:4/3.2}}
+.chap.media .vis{aspect-ratio:4/5;max-width:440px;justify-self:center;width:100%}
+.chap.stack .chap-in{grid-template-columns:minmax(0,1fr);gap:36px}
+.chap.stack .chap-in>.rv{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:12px 56px;align-items:end}
+.chap.stack .chap-in>.rv h2{grid-column:1;grid-row:1/span 2}
+.chap.stack .chap-in>.rv p,.chap.stack .chap-in>.rv .link{grid-column:2}
+.chap.stack .vis{aspect-ratio:16/9}
+.chap.stack.wide .vis{aspect-ratio:21/9}
+.chap.core .chap-in{grid-template-columns:minmax(0,1fr)}
+.chap.core .chap-in>.rv{max-width:760px}
+.chap.core .vis{display:none}
+@media (max-width:860px){.chap.stack .chap-in>.rv{display:block}.chap.stack .vis,.chap.stack.wide .vis{aspect-ratio:4/3.2}.chap-in{grid-template-columns:minmax(0,1fr)}.chap.rev .chap-in>:first-child{order:0}.vis{aspect-ratio:4/3.2}}
 
 /* prueba: carrusel horizontal */
 .proof{padding:clamp(80px,10vw,150px) 0;border-top:1px solid var(--line)}
@@ -124,8 +134,8 @@ header nav a:hover::after{transform:scaleX(1)}
 
 /* cierre */
 .final{padding:clamp(100px,14vw,220px) 0;text-align:center;border-top:1px solid var(--line)}
-.final h2{margin:18px auto 38px;font:300 clamp(36px,6.6vw,104px)/1.02 var(--serif);letter-spacing:-.035em;max-width:15ch}
-.final h2 em{font-style:italic;color:var(--gold)}
+.final h2{margin:18px auto 38px;font:300 clamp(36px,6.6vw,104px)/1.02 var(--serif);letter-spacing:-.02em;max-width:15ch}
+.final h2 em{font-style:normal;color:var(--gold)}
 .btn{display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 34px;background:var(--gold);color:var(--btnink);font:600 15px/1 var(--sans);letter-spacing:.04em;border-radius:2px;transition:transform .5s var(--ease),box-shadow .5s}
 .btn:hover{box-shadow:0 20px 50px -18px rgba(200,164,92,.6)}
 .btn.line2{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
@@ -145,7 +155,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </head>
 <body>
 <div class="cur" id="cur"></div>
-<div class="sw" role="group" aria-label="Elegir opción de diseño"><button data-o="a" class="on">A · Noche</button><button data-o="b">B · Marfil</button><button data-o="c">C · Verde</button></div>
+<div class="sw" role="group" aria-label="Elegir opción de diseño"><button data-o="a" class="on">A · Noche</button><button data-o="b">B · Galería</button><button data-o="c">C · Verde</button></div>
 <header>
   <a class="logo" href="#"><img src="assets/sofymar-emblema.png" alt="">SOFYMAR</a>
   <nav><a href="#capitulos">Soluciones</a><a href="#prueba">Trabajos</a><a href="#contacto">Contacto</a><a class="cta-h" href="#contacto">Hablemos</a></nav>
@@ -158,9 +168,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <video id="hv" muted playsinline preload="auto" poster="assets/hero-edificio-poster.jpg" data-d="assets/hero-edificio-timeline.mp4" data-m="assets/hero-edificio-scrub-movil.mp4"></video>
     <div class="shade"></div>
     <div class="hero-copy"><div class="wrap">
-      <p class="eyebrow">Real estate inteligente · Santa Cruz, Bolivia</p>
       <h1><span class="line"><span>Presentamos tus</span></span><span class="line"><span>propiedades como</span></span><span class="line"><span><em>piezas únicas.</em></span></span></h1>
-      <p class="sub">Presentación de nivel internacional y una inteligencia que atiende a cada interesado. Para agentes y desarrolladoras que quieren captar más.</p>
+      <p class="sub">Presentación de nivel internacional y una inteligencia que atiende a cada interesado, para agentes y desarrolladoras de Santa Cruz que quieren captar más.</p>
     </div></div>
     <div class="hero-foot"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%">
       <div class="tod"><b id="t1" class="on">Noche</b><i id="tbar"></i><b id="t2">Día</b></div>
@@ -171,41 +180,41 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <!-- MANIFIESTO -->
 <section class="manifesto"><div class="wrap">
-  <p class="eyebrow rv" style="margin-bottom:34px">Por qué existe SOFYMAR</p>
+  
   <p class="big" id="mani" data-words>Hoy no alcanza con publicar una propiedad. Hay que presentarla como una pieza única y atender a cada interesado, siempre a tiempo.</p>
 </div></section>
 
 <!-- CAPÍTULOS -->
 <div id="capitulos">
 <section class="chap"><div class="wrap chap-in">
-  <div class="rv"><div class="num">01</div><p class="eyebrow">SOFYMAR IA</p><h2>Una asistente que <em>atiende</em> por ti.</h2><p>Sofya responde las consultas por WhatsApp, califica a cada interesado y ayuda a agendar la visita. Tú entras cuando ya quiere hablar.</p><a class="link" href="#contacto">Conocer SOFYMAR IA <span>→</span></a></div>
+  <div class="rv"><h2><em>SOFYMAR IA.</em> Una asistente que atiende por ti.</h2><p>Sofya responde las consultas por WhatsApp, califica a cada interesado y ayuda a agendar la visita. Tú entras cuando ya quiere hablar.</p><a class="link" href="#contacto">Conocer SOFYMAR IA <span>→</span></a></div>
   <div class="vis" data-vis><div class="chat" id="chat"><div class="who">Sofya · WhatsApp</div><div class="m in">¿Sigue disponible el depto?</div><div class="m out">¡Sí! ¿Es para vivir o para inversión?</div><div class="m in">Para vivir, somos dos.</div><div class="m out">¿Te queda bien visitarlo el jueves a las 17:00?</div></div></div>
 </div></section>
 
-<section class="chap rev"><div class="wrap chap-in">
-  <div class="rv"><div class="num">02</div><p class="eyebrow">SOFYMAR MEDIA</p><h2>Video que hace <em>desear</em> la visita.</h2><p>Dron, cámara profesional y contenido vertical para que cada propiedad se vea como lo que es. Un reel nuestro superó las 25.000 vistas en TikTok.</p><a class="link" href="#contacto">Conocer SOFYMAR MEDIA <span>→</span></a></div>
+<section class="chap rev media"><div class="wrap chap-in">
+  <div class="rv"><h2><em>SOFYMAR MEDIA.</em> Video que hace desear la visita.</h2><p>Dron, cámara profesional y contenido vertical para que cada propiedad se vea como lo que es. Un reel nuestro superó las 25.000 vistas en TikTok.</p><a class="link" href="#contacto">Conocer SOFYMAR MEDIA <span>→</span></a></div>
   <div class="vis" data-vis><img data-par src="assets/media-ingrid-poster.jpg" alt="Reel de una propiedad en Santa Cruz"></div>
 </div></section>
 
-<section class="chap"><div class="wrap chap-in">
-  <div class="rv"><div class="num">03</div><p class="eyebrow">SOFYMAR WEB</p><h2>Una página que <em>vende</em> mientras duermes.</h2><p>Landings y showrooms que presentan la propiedad con claridad y llevan al interesado directo a WhatsApp.</p><a class="link" href="#contacto">Conocer SOFYMAR WEB <span>→</span></a></div>
+<section class="chap stack"><div class="wrap chap-in">
+  <div class="rv"><h2><em>SOFYMAR WEB.</em> Una página que vende mientras duermes.</h2><p>Landings y showrooms que presentan la propiedad con claridad y llevan al interesado directo a WhatsApp.</p><a class="link" href="#contacto">Conocer SOFYMAR WEB <span>→</span></a></div>
   <div class="vis" data-vis><img data-par src="assets/web-swiss-full-laptop.webp" alt="Landing de una torre hotelera" style="object-position:top"></div>
 </div></section>
 
-<section class="chap rev"><div class="wrap chap-in">
-  <div class="rv"><div class="num">04</div><p class="eyebrow">SOFYMAR AI VISUAL</p><h2>Del terreno vacío a la casa que <em>se imagina.</em></h2><p>Visualizaciones conceptuales con inteligencia artificial, siempre identificadas como tales, para que el comprador vea lo que todavía no existe.</p><a class="link" href="#contacto">Conocer AI VISUAL <span>→</span></a></div>
+<section class="chap stack wide"><div class="wrap chap-in">
+  <div class="rv"><h2><em>SOFYMAR AI VISUAL.</em> Del terreno vacío a la casa que se imagina.</h2><p>Visualizaciones conceptuales con inteligencia artificial, siempre identificadas como tales, para que el comprador vea lo que todavía no existe.</p><a class="link" href="#contacto">Conocer AI VISUAL <span>→</span></a></div>
   <div class="vis" data-vis><div class="ba"><img src="assets/aiv-colinas-terreno-mejorado.webp" alt="Terreno real" style="object-fit:cover"><img class="after" src="assets/aiv-colinas-casa-ia-mejorada.webp" alt="Visualización conceptual" style="object-fit:cover"><div class="bar"></div></div><span class="tag-v">Terreno real · visualización conceptual</span></div>
 </div></section>
 
-<section class="chap"><div class="wrap chap-in">
-  <div class="rv"><div class="num">05</div><span class="soon">En desarrollo</span><p class="eyebrow" style="margin-top:12px">SOFYMAR CORE</p><h2>El cerebro que <em>une</em> todo.</h2><p>Inventario, clientes y oportunidades en un solo lugar, consultables con inteligencia artificial. Lo estamos construyendo.</p></div>
+<section class="chap core"><div class="wrap chap-in">
+  <div class="rv"><span class="soon">En desarrollo</span><h2><em>SOFYMAR CORE.</em> El cerebro que une todo.</h2><p>Inventario, clientes y oportunidades en un solo lugar, consultables con inteligencia artificial. Lo estamos construyendo.</p></div>
   <div class="vis" data-vis><img data-par src="assets/core-centro-mando.webp" alt="Prototipo del centro de mando de SOFYMAR CORE" style="object-fit:cover"></div>
 </div></section>
 </div>
 
 <!-- PRUEBA -->
 <section class="proof" id="prueba">
-  <div class="wrap"><p class="eyebrow rv">Trabajo real</p><h2 class="rv">Ya está vendiendo en Santa Cruz.</h2></div>
+  <div class="wrap"><h2 class="rv">Ya está vendiendo en Santa Cruz.</h2></div>
   <div class="rail" id="rail">
     <article class="work"><div class="shot"><img src="assets/web-swiss-full-laptop.webp" alt="Swissôtel Residencia" loading="lazy"></div><h3>Swissôtel Residencia</h3><p>Landing de una torre hotelera cinco estrellas · Equipetrol</p></article>
     <article class="work"><div class="shot"><img src="assets/web-colinas-full-laptop.webp" alt="Colinas del Urubó" loading="lazy"></div><h3>Colinas del Urubó</h3><p>Landing de terreno con visualización en IA</p></article>
@@ -215,7 +224,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <!-- CIERRE -->
 <section class="final" id="contacto"><div class="wrap">
-  <p class="eyebrow rv">Empecemos</p>
   <h2 class="rv">Presenta tu próxima propiedad <em>como se merece.</em></h2>
   <div class="rv"><a class="btn" href="https://wa.me/59177192180">Hablemos por WhatsApp <span aria-hidden="true">→</span></a></div>
 </div></section>
