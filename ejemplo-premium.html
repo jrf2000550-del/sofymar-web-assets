@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SOFYMAR · Opciones premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0A08;--ink:#F2EEE6;--mut:#A8A193;--line:rgba(242,238,230,.16);--gold:#C8A45C;--stroke:rgba(242,238,230,.35);--panel:#15130f;--btnink:#17120a;--hw:300;--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.02em}
+.eyebrow{font:500 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* ===== opciones de diseño ===== */
+html[data-t="b"]{--bg:#F3EFE6;--ink:#1B1A17;--mut:#6B6657;--line:rgba(27,26,23,.16);--gold:#8A6B3F;--stroke:rgba(27,26,23,.4);--panel:#E8E2D4;--btnink:#fff}
+html[data-t="c"]{--bg:#0A1B17;--ink:#EDE9DC;--mut:#9DAEA6;--line:rgba(237,233,220,.16);--gold:#C9A35B;--stroke:rgba(237,233,220,.35);--panel:#102620;--btnink:#10150f;--hw:300;--serif:"Manrope",system-ui,sans-serif}
+html[data-t="c"] .hero h1,html[data-t="c"] .manifesto p.big,html[data-t="c"] .chap h2,html[data-t="c"] .proof h2,html[data-t="c"] .final h2,html[data-t="c"] .num{letter-spacing:-.045em;font-weight:300}
+html[data-t="c"] em{font-style:normal}
+.hero{color:#F2EEE6}
+.hero .eyebrow,.hero h1 em{color:#C8A45C}
+.hero-foot{color:#A8A193}
+.hero .tod .on{color:#F2EEE6}
+.chat{color:#F2EEE6}
+.chat .who,.tag-v{color:#C9C2B4}
+.tag-v{color:#F2EEE6}
+.sw{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:80;display:flex;gap:4px;padding:5px;background:rgba(20,19,15,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:999px}
+.sw button{white-space:nowrap;border:0;background:transparent;color:#F2EEE6;font:600 13px/1 Inter,sans-serif;padding:11px 16px;border-radius:999px;cursor:pointer}
+.sw button.on{background:#F2EEE6;color:#14130f}
+@media (max-width:420px){.sw button{padding:10px 12px;font-size:12px}}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,4vw,48px);mix-blend-mode:difference}
+header .logo{display:flex;align-items:center;gap:10px;font:600 14px/1 var(--sans);letter-spacing:.3em}
+header .logo img{width:26px;height:26px}
+header nav{display:flex;gap:30px;font:500 13px/1 var(--sans);letter-spacing:.08em}
+header nav a{opacity:.85;position:relative}
+header nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+header nav a:hover::after{transform:scaleX(1)}
+@media (max-width:760px){header nav a:not(.cta-h){display:none}}
+.cta-h{border:1px solid currentColor;padding:10px 16px;border-radius:2px}
+
+/* hero con video que avanza al hacer scroll */
+.hero{height:340vh;position:relative}
+.hero-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute}
+.shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,10,8,.88) 0%,rgba(11,10,8,.15) 55%,rgba(11,10,8,.5) 100%)}
+.hero-copy{position:absolute;left:0;right:0;bottom:clamp(70px,12vh,130px)}
+.hero h1{margin:18px 0 0;font:300 clamp(40px,8.2vw,128px)/.98 var(--serif);letter-spacing:-.035em;max-width:13ch}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:block;transform:translateY(105%);transition:transform 1.3s var(--ease)}
+.ready .line>span{transform:none}
+.line:nth-child(2)>span{transition-delay:.12s}.line:nth-child(3)>span{transition-delay:.24s}
+.hero-foot{position:absolute;left:0;right:0;bottom:26px;display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.tod{display:flex;align-items:center;gap:14px}
+.tod b{font-weight:500;transition:color .4s}
+.tod i{display:block;width:clamp(80px,14vw,200px);height:1px;background:var(--line);position:relative}
+.tod i::after{content:"";position:absolute;left:0;top:-1px;height:3px;width:var(--p,0%);background:var(--gold)}
+.tod .on{color:var(--ink)}
+.sub{margin:22px 0 0;max-width:46ch;color:#D8D2C4;font-size:clamp(16px,1.4vw,19px)}
+.hint{display:flex;align-items:center;gap:10px}
+.hint::before{content:"";width:1px;height:34px;background:var(--gold);animation:drop 2s var(--ease) infinite;transform-origin:top}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* manifiesto: las palabras se encienden con el scroll */
+.manifesto{padding:clamp(110px,16vw,240px) 0}
+.manifesto p.big{margin:0;font:300 clamp(28px,4.6vw,66px)/1.16 var(--serif);letter-spacing:-.02em;max-width:22ch}
+.manifesto .w{opacity:.16;transition:opacity .4s}
+.manifesto .w.on{opacity:1}
+.manifesto .w.g.on{color:var(--gold)}
+
+/* capítulos */
+.chap{border-top:1px solid var(--line);padding:clamp(60px,8vw,120px) 0}
+.chap-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,6vw,100px);align-items:center}
+.chap.rev .chap-in>:first-child{order:2}
+.num{font:var(--hw) clamp(60px,9vw,150px)/1 var(--serif);color:transparent;-webkit-text-stroke:1px var(--stroke);letter-spacing:-.04em}
+.chap h2{margin:14px 0 14px;font:300 clamp(34px,5vw,76px)/1.02 var(--serif);letter-spacing:-.03em}
+.chap h2 em{font-style:italic;color:var(--gold)}
+.chap p{margin:0 0 24px;color:var(--mut);max-width:42ch}
+.link{display:inline-flex;align-items:center;gap:12px;font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:8px}
+.link span{transition:transform .5s var(--ease)}
+.link:hover span{transform:translateX(8px)}
+.vis{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--panel)}
+.vis::after{content:"";position:absolute;inset:-1px;background:var(--bg);transform-origin:top;transition:transform 1.4s var(--ease);z-index:5}
+.vis.in::after{transform:scaleY(0)}
+.vis img{width:100%;height:118%;object-fit:cover;will-change:transform}
+.soon{font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:9px 14px;border-radius:99px;display:inline-block;margin-bottom:6px}
+/* chat Sofya */
+.chat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:clamp(20px,4vw,48px);background:radial-gradient(ellipse at 30% 20%,#1d1a13,#0f0e0b)}
+.chat .m{max-width:78%;padding:12px 16px;border-radius:16px;font-size:clamp(14px,1.3vw,16px);line-height:1.4;opacity:0;transform:translateY(14px);transition:all .7s var(--ease)}
+.chat .in{background:#26231c;border-top-left-radius:4px}
+.chat .out{background:var(--gold);color:#1a150a;margin-left:auto;border-top-right-radius:4px}
+.chat .m.show{opacity:1;transform:none}
+.chat .who{font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+/* antes/después barrido */
+.ba{position:absolute;inset:0}
+.ba img{position:absolute;inset:0;width:100%;height:100%}
+.ba .after{clip-path:inset(0 0 0 50%);animation:sweep 7s var(--ease) infinite alternate}
+.ba .bar{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);animation:sweepbar 7s var(--ease) infinite alternate}
+@keyframes sweep{0%,10%{clip-path:inset(0 0 0 92%)}90%,100%{clip-path:inset(0 0 0 8%)}}
+@keyframes sweepbar{0%,10%{left:92%}90%,100%{left:8%}}
+.tag-v{position:absolute;bottom:14px;left:14px;z-index:2;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;background:rgba(11,10,8,.7);padding:8px 11px;border-radius:2px}
+@media (max-width:860px){.chap-in{grid-template-columns:minmax(0,1fr)}.chap.rev .chap-in>:first-child{order:0}.vis{aspect-ratio:4/3.2}}
+
+/* prueba: carrusel horizontal */
+.proof{padding:clamp(80px,10vw,150px) 0;border-top:1px solid var(--line)}
+.proof h2{margin:14px 0 40px;font:300 clamp(34px,5vw,76px)/1.02 var(--serif);letter-spacing:-.03em;max-width:14ch}
+.rail{display:flex;gap:clamp(14px,2vw,28px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(18px,4vw,48px) 24px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.work{flex:0 0 min(78vw,520px);scroll-snap-align:start}
+.work .shot{aspect-ratio:16/11;overflow:hidden;background:var(--panel);position:relative}
+.work .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 7s linear}
+.work:hover .shot img{transform:translateY(-12%) scale(1.02)}
+.work h3{margin:16px 0 4px;font:300 26px/1.1 var(--serif);letter-spacing:-.01em}
+.work p{margin:0;color:var(--mut);font-size:14.5px}
+
+/* cierre */
+.final{padding:clamp(100px,14vw,220px) 0;text-align:center;border-top:1px solid var(--line)}
+.final h2{margin:18px auto 38px;font:300 clamp(36px,6.6vw,104px)/1.02 var(--serif);letter-spacing:-.035em;max-width:15ch}
+.final h2 em{font-style:italic;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 34px;background:var(--gold);color:var(--btnink);font:600 15px/1 var(--sans);letter-spacing:.04em;border-radius:2px;transition:transform .5s var(--ease),box-shadow .5s}
+.btn:hover{box-shadow:0 20px 50px -18px rgba(200,164,92,.6)}
+.btn.line2{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+@media (max-width:560px){.btn{width:100%;justify-content:center}.btn.line2{margin:10px 0 0}}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* aparición al hacer scroll */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;border:1px solid rgba(242,238,230,.5);border-radius:50%;z-index:60;pointer-events:none;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s;mix-blend-mode:difference}
+.cur.big{width:84px;height:84px;margin:-42px 0 0 -42px;background:rgba(242,238,230,.12)}
+@media (hover:none),(max-width:900px){.cur{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.line>span{opacity:1;transform:none}.vis::after{display:none}.manifesto .w{opacity:1}.hero{height:100svh}}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="sw" role="group" aria-label="Elegir opción de diseño"><button data-o="a" class="on">A · Noche</button><button data-o="b">B · Marfil</button><button data-o="c">C · Verde</button></div>
+<header>
+  <a class="logo" href="#"><img src="assets/sofymar-emblema.png" alt="">SOFYMAR</a>
+  <nav><a href="#capitulos">Soluciones</a><a href="#prueba">Trabajos</a><a href="#contacto">Contacto</a><a class="cta-h" href="#contacto">Hablemos</a></nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-stick">
+    <img class="poster" src="assets/hero-edificio-poster.jpg" alt="" fetchpriority="high">
+    <video id="hv" muted playsinline preload="auto" poster="assets/hero-edificio-poster.jpg" data-d="assets/hero-edificio-timeline.mp4" data-m="assets/hero-edificio-scrub-movil.mp4"></video>
+    <div class="shade"></div>
+    <div class="hero-copy"><div class="wrap">
+      <p class="eyebrow">Real estate inteligente · Santa Cruz, Bolivia</p>
+      <h1><span class="line"><span>Presentamos tus</span></span><span class="line"><span>propiedades como</span></span><span class="line"><span><em>piezas únicas.</em></span></span></h1>
+      <p class="sub">Presentación de nivel internacional y una inteligencia que atiende a cada interesado. Para agentes y desarrolladoras que quieren captar más.</p>
+    </div></div>
+    <div class="hero-foot"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%">
+      <div class="tod"><b id="t1" class="on">Noche</b><i id="tbar"></i><b id="t2">Día</b></div>
+      <div class="hint">Desplazá</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- MANIFIESTO -->
+<section class="manifesto"><div class="wrap">
+  <p class="eyebrow rv" style="margin-bottom:34px">Por qué existe SOFYMAR</p>
+  <p class="big" id="mani" data-words>Hoy no alcanza con publicar una propiedad. Hay que presentarla como una pieza única y atender a cada interesado, siempre a tiempo.</p>
+</div></section>
+
+<!-- CAPÍTULOS -->
+<div id="capitulos">
+<section class="chap"><div class="wrap chap-in">
+  <div class="rv"><div class="num">01</div><p class="eyebrow">SOFYMAR IA</p><h2>Una asistente que <em>atiende</em> por ti.</h2><p>Sofya responde las consultas por WhatsApp, califica a cada interesado y ayuda a agendar la visita. Tú entras cuando ya quiere hablar.</p><a class="link" href="#contacto">Conocer SOFYMAR IA <span>→</span></a></div>
+  <div class="vis" data-vis><div class="chat" id="chat"><div class="who">Sofya · WhatsApp</div><div class="m in">¿Sigue disponible el depto?</div><div class="m out">¡Sí! ¿Es para vivir o para inversión?</div><div class="m in">Para vivir, somos dos.</div><div class="m out">¿Te queda bien visitarlo el jueves a las 17:00?</div></div></div>
+</div></section>
+
+<section class="chap rev"><div class="wrap chap-in">
+  <div class="rv"><div class="num">02</div><p class="eyebrow">SOFYMAR MEDIA</p><h2>Video que hace <em>desear</em> la visita.</h2><p>Dron, cámara profesional y contenido vertical para que cada propiedad se vea como lo que es. Un reel nuestro superó las 25.000 vistas en TikTok.</p><a class="link" href="#contacto">Conocer SOFYMAR MEDIA <span>→</span></a></div>
+  <div class="vis" data-vis><img data-par src="assets/media-ingrid-poster.jpg" alt="Reel de una propiedad en Santa Cruz"></div>
+</div></section>
+
+<section class="chap"><div class="wrap chap-in">
+  <div class="rv"><div class="num">03</div><p class="eyebrow">SOFYMAR WEB</p><h2>Una página que <em>vende</em> mientras duermes.</h2><p>Landings y showrooms que presentan la propiedad con claridad y llevan al interesado directo a WhatsApp.</p><a class="link" href="#contacto">Conocer SOFYMAR WEB <span>→</span></a></div>
+  <div class="vis" data-vis><img data-par src="assets/web-swiss-full-laptop.webp" alt="Landing de una torre hotelera" style="object-position:top"></div>
+</div></section>
+
+<section class="chap rev"><div class="wrap chap-in">
+  <div class="rv"><div class="num">04</div><p class="eyebrow">SOFYMAR AI VISUAL</p><h2>Del terreno vacío a la casa que <em>se imagina.</em></h2><p>Visualizaciones conceptuales con inteligencia artificial, siempre identificadas como tales, para que el comprador vea lo que todavía no existe.</p><a class="link" href="#contacto">Conocer AI VISUAL <span>→</span></a></div>
+  <div class="vis" data-vis><div class="ba"><img src="assets/aiv-colinas-terreno-mejorado.webp" alt="Terreno real" style="object-fit:cover"><img class="after" src="assets/aiv-colinas-casa-ia-mejorada.webp" alt="Visualización conceptual" style="object-fit:cover"><div class="bar"></div></div><span class="tag-v">Terreno real · visualización conceptual</span></div>
+</div></section>
+
+<section class="chap"><div class="wrap chap-in">
+  <div class="rv"><div class="num">05</div><span class="soon">En desarrollo</span><p class="eyebrow" style="margin-top:12px">SOFYMAR CORE</p><h2>El cerebro que <em>une</em> todo.</h2><p>Inventario, clientes y oportunidades en un solo lugar, consultables con inteligencia artificial. Lo estamos construyendo.</p></div>
+  <div class="vis" data-vis><img data-par src="assets/core-centro-mando.webp" alt="Prototipo del centro de mando de SOFYMAR CORE" style="object-fit:cover"></div>
+</div></section>
+</div>
+
+<!-- PRUEBA -->
+<section class="proof" id="prueba">
+  <div class="wrap"><p class="eyebrow rv">Trabajo real</p><h2 class="rv">Ya está vendiendo en Santa Cruz.</h2></div>
+  <div class="rail" id="rail">
+    <article class="work"><div class="shot"><img src="assets/web-swiss-full-laptop.webp" alt="Swissôtel Residencia" loading="lazy"></div><h3>Swissôtel Residencia</h3><p>Landing de una torre hotelera cinco estrellas · Equipetrol</p></article>
+    <article class="work"><div class="shot"><img src="assets/web-colinas-full-laptop.webp" alt="Colinas del Urubó" loading="lazy"></div><h3>Colinas del Urubó</h3><p>Landing de terreno con visualización en IA</p></article>
+    <article class="work"><div class="shot"><img src="assets/web-luis-full-laptop.webp" alt="Luis Sattori" loading="lazy"></div><h3>Luis Sattori Real Estate</h3><p>Landing de captación de inversionistas · Florida</p></article>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="final" id="contacto"><div class="wrap">
+  <p class="eyebrow rv">Empecemos</p>
+  <h2 class="rv">Presenta tu próxima propiedad <em>como se merece.</em></h2>
+  <div class="rv"><a class="btn" href="https://wa.me/59177192180">Hablemos por WhatsApp <span aria-hidden="true">→</span></a></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 SOFYMAR · Santa Cruz de la Sierra, Bolivia</span><span>Real estate inteligente</span></div></footer>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches, mobile=matchMedia('(max-width:768px)').matches;
+  requestAnimationFrame(function(){setTimeout(function(){document.body.classList.add('ready')},120)});
+
+  /* video que avanza con el scroll */
+  var hero=document.getElementById('hero'),v=document.getElementById('hv'),bar=document.getElementById('tbar'),t1=document.getElementById('t1'),t2=document.getElementById('t2');
+  var ready=false,target=0,cur=0;
+  if(!reduce){ v.src=mobile?v.dataset.m:v.dataset.d; v.pause(); v.addEventListener('loadedmetadata',function(){ready=true;upd()}); v.load();
+    var wake=function(){v.play().then(function(){v.pause()}).catch(function(){})};['touchstart','pointerdown','scroll'].forEach(function(e){addEventListener(e,wake,{once:true,passive:true})});
+    (function loop(){ if(ready&&Math.abs(target-cur)>.001){cur+=(target-cur)*.16; if(!v.seeking)v.currentTime=cur} requestAnimationFrame(loop)})(); }
+  function prog(){var sc=hero.offsetHeight-innerHeight;return sc>0?Math.min(Math.max(-hero.getBoundingClientRect().top/sc,0),1):0}
+  function upd(){var p=prog(); bar.style.setProperty('--p',(p*100)+'%'); t1.classList.toggle('on',p<.5); t2.classList.toggle('on',p>=.5); if(ready&&v.duration)target=p*(v.duration-.05)}
+
+  /* palabras del manifiesto */
+  var mani=document.getElementById('mani'),words=[];
+  var gold={'única':1,'pieza':1,'tiempo':1};
+  mani.innerHTML=mani.textContent.split(' ').map(function(w){var k=w.replace(/[.,]/g,'');return '<span class="w'+(gold[k]?' g':'')+'">'+w+'</span>'}).join(' ');
+  words=[].slice.call(mani.querySelectorAll('.w'));
+  function mw(){var r=mani.getBoundingClientRect(),h=innerHeight,p=Math.min(Math.max((h*.85-r.top)/(r.height+h*.35),0),1);var n=Math.round(p*words.length);words.forEach(function(w,i){w.classList.toggle('on',i<n)})}
+
+  /* paralaje de imágenes */
+  var pars=[].slice.call(document.querySelectorAll('[data-par]'));
+  function par(){pars.forEach(function(i){var r=i.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var p=(r.top+r.height/2-innerHeight/2)/innerHeight;i.style.transform='translateY('+(-p*7-9)+'%)'})}
+
+  var tick=false;addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){upd();mw();par();tick=false})},{passive:true});
+  addEventListener('resize',function(){upd();mw();par()});upd();mw();par();
+
+  /* apariciones */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18});
+  document.querySelectorAll('.rv,[data-vis]').forEach(function(e){io.observe(e)});
+  /* chat de Sofya, mensaje por mensaje */
+  var chat=document.getElementById('chat'),ms=[].slice.call(chat.querySelectorAll('.m')),played=false;
+  new IntersectionObserver(function(es,o){if(es[0].isIntersecting&&!played){played=true;ms.forEach(function(m,i){setTimeout(function(){m.classList.add('show')},700+i*1400)});o.disconnect()}},{threshold:.4}).observe(chat);
+  if(reduce)ms.forEach(function(m){m.classList.add('show')});
+
+  /* elegir opción */
+  var sw=[].slice.call(document.querySelectorAll('.sw button'));
+  function setT(t){document.documentElement.setAttribute('data-t',t);sw.forEach(function(b){b.classList.toggle('on',b.dataset.o===t)});try{history.replaceState(null,'','#'+t)}catch(e){}}
+  sw.forEach(function(b){b.addEventListener('click',function(){setT(b.dataset.o)})});
+  var h0=(location.hash||'').replace('#','');if(/^[abc]$/.test(h0))setT(h0);
+  addEventListener('hashchange',function(){var h=(location.hash||'').replace('#','');if(/^[abc]$/.test(h))setT(h)});
+  /* cursor */
+  var c=document.getElementById('cur');
+  if(c&&!matchMedia('(hover:none)').matches){var x=0,y=0,tx=0,ty=0;addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY});(function m(){x+=(tx-x)*.18;y+=(ty-y)*.18;c.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(m)})();
+    document.querySelectorAll('a,.work,.btn').forEach(function(e){e.addEventListener('mouseenter',function(){c.classList.add('big')});e.addEventListener('mouseleave',function(){c.classList.remove('big')})})}
+  /* arrastrar el carrusel con el mouse */
+  var rail=document.getElementById('rail'),down=false,sx=0,sl=0;
+  rail.addEventListener('mousedown',function(e){down=true;sx=e.pageX;sl=rail.scrollLeft;rail.style.scrollSnapType='none'});
+  addEventListener('mouseup',function(){down=false;rail.style.scrollSnapType=''});
+  rail.addEventListener('mousemove',function(e){if(!down)return;rail.scrollLeft=sl-(e.pageX-sx)});
+})();
+</script>
+</body>
+</html>
