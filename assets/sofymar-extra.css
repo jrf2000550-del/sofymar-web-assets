@@ -721,3 +721,28 @@
   .pipe .stage .badge{justify-self:start}
 }
 @media (max-width:760px){.bfa .nd text{font-size:13px}.bfa .nd text{letter-spacing:0}}
+
+/* ==========================================================================
+   DIRECCIÓN "RESIDENCIA" — lujo silencioso (tokens de DESIGN.md)
+   Un solo bloque: para volver atrás, borrar desde acá hasta el final.
+   ========================================================================== */
+:root{
+  --bg:#0E0D0B;--bg-2:#14130F;--panel:#1A1915;--grafito:#2B2A27;
+  --line:#3A3832;--line-soft:rgba(58,56,50,.6);
+  --marfil:#F6F3EC;--titanio:#C9C2B4;--muted:#9A9484;
+  --f-h:"Fraunces",Georgia,"Times New Roman",serif;
+  --r:6px;
+}
+.lt,.lt-w{--bg:#F6F3EC;--bg-2:#F6F3EC;--panel:#FFFFFF;--grafito:#EDE8DC;--line:#E0DACB;--blanco:#2B2A27;--titanio:#55503F;--muted:#6B6657}
+.lt-w{--bg:#FFFFFF;--bg-2:#FFFFFF;--panel:#F6F3EC}
+h1,h2,h3,h4,.big,.mid,.h1,.sub-h,.h1-land{font-family:var(--f-h)}
+.big,.mid,.h1,.sub-h,.h1-land{font-weight:500;text-transform:none;letter-spacing:-.015em;line-height:1.08}
+.h1{line-height:1.04}
+.stage h3,.pipe-final,.ptable thead .am,.stat .n{text-transform:none}
+.stat .n,.ptable thead .am,.tp-table td{font-family:var(--f-h);font-weight:500}
+.btn{border-radius:4px;box-shadow:none}
+.btn-gold{box-shadow:none}
+.nav .btn,.sn-cta{border-radius:4px}
+.hud,.case,.browser,.work,.lux-card,.ag,.clip-box,.yt,.human-fig,.bfa-card,.eco-panel,.tp-table{--r:6px}
+.ag,.bfa-card,.human-fig,.yt,.clip-box,.reel,.reel-v,.noche{border-radius:8px}
+h3,h4{text-transform:none}
